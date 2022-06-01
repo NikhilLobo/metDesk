@@ -20,8 +20,8 @@ const useFetch = (url) => {
         }
         return res.json();
       })
-      .then((data) => {
-        setData(data);
+      .then((result) => {
+        setData(result.data.reverse());
         setIsPending(false);
         setError(null);
       })

@@ -14,7 +14,7 @@ const DisplayForecast = ({ issue, model }) => {
       {error && <div>{error} forcasts</div>}
       {isPending && <div>Loading...</div>}
       {!error &&
-        forecasts?.data?.map((issue, index) => (
+        [...forecasts]?.reverse().map((issue, index) => (
           <Tooltip
             title={new Date(issue).toString()}
             trigger="click"

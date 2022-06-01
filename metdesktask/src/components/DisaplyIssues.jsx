@@ -11,7 +11,7 @@ const DisplayIssues = ({ setIssue, model }) => {
   );
   useEffect(() => {
     if (issues.length !== 0) {
-      setIssue(issues?.data[0]);
+      setIssue(issues[0]);
     }
   }, [issues, setIssue]);
   return (
@@ -19,7 +19,7 @@ const DisplayIssues = ({ setIssue, model }) => {
       {error && <div>{error} issues</div>}
       {isPending && <div>Loading...</div>}
       {!error &&
-        issues?.data?.map((issue, index) => (
+        issues?.map((issue, index) => (
           <Tooltip
             title={new Date(issue).toLocaleString()}
             color="green"
