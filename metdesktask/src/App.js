@@ -1,16 +1,24 @@
-import "./App.css";
-import { Button } from "antd";
+// import "./App.css";
+import DtgBar from "./components/DtgBar";
+import { Layout } from "antd";
+const { Header } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <Button type="primary">Button Test</Button>
-        </p>
-      </header>
-    </div>
+    <>
+      <Layout>
+        <Header className="header">
+          <DtgBar />
+        </Header>
+      </Layout>
+      <style>
+        {`
+        .header{
+          height: 100px;
+        }
+        `}
+      </style>
+    </>
   );
 }
 
